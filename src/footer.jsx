@@ -1,9 +1,14 @@
 "use client";
+import sarvdeep from './assets/sarvdeep.png'
+import Rishab from './assets/rishab.png'
+import Priyanshu from './assets/priyanshu.png';
+import Abhijeet from './assets/abhijeet.png';
 
 import { Github } from "lucide-react";
 import { Boxes } from "./components/background-boxes";
-import { AnimatedTooltip } from "./components/animated-tooltip"; // ✅ make sure this path is correct
+import { AnimatedTooltip } from "./components/animated-tooltip"; //make sure this path is correct
 import "../src/global.css";
+
 
 const teamMembers = [
   { 
@@ -17,28 +22,28 @@ const teamMembers = [
     id: 2,
     name: "Rishabh Srivastava", 
     designation: "ML Engineer",
-    image: "#",
+    image: "https://avatar.iran.liara.run/public/31",
     linkedin: "https://www.linkedin.com/in/rishabh-srivastava-796b60244/ "
   },
   { 
     id: 3,
     name: "Sarvpreet Kaur", 
     designation: "Research",
-    image: "/team/lena.jpg",
+    image: "https://avatar.iran.liara.run/public/64",
     linkedin: "https://www.linkedin.com/in/sarvpreet-kaur-a230702a1/ "
   },
   { 
     id: 4,
     name: "Priyanshu Kumar", 
     designation: "AgentAI head",
-    image: "/team/marcus.jpg",
+    image: "https://avatar.iran.liara.run/public/3",
     linkedin: "https://www.linkedin.com/in/priyanshu-kumar-980b50179/ "
   },
   { 
     id: 5,
     name: "Abhijeet", 
     designation: "UI and Frontend",
-    image: "/assets/abhi.png",
+    image: "https://avatar.iran.liara.run/public/28",
     linkedin: "https://linkedin.com/in/research-example"
   }
 ];
@@ -46,7 +51,7 @@ const teamMembers = [
 export const Footer = () => {
   return (
     <footer className="relative overflow-visible bg-gray-900 border-t border-gray-700 text-gray-300">
-
+      
       {/* Background Boxes */}
       <div className="absolute inset-0 w-full h-full">
         <Boxes />
@@ -105,6 +110,7 @@ export const Footer = () => {
             Fabricated within the Nexus grid • Indigenous AI from zero
           </p>
         </div>
+
 
       </div>
     </footer>

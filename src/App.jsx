@@ -1,34 +1,67 @@
-import React from "react";
-// import OrbitPage from "./OrbitPage";
+import React, { useEffect, useState } from "react";
 import './global.css';
 import Chat from "./pages/Chat";
-import { Boxes } from "./components/background-boxes";
-import { cn } from "./lib/utils";
-import { Footer } from "./footer";
+import { Features } from "./pages/Features";
 import FloatingPillNavbar from "./components/FloatingPillNavbar";
 import Hero from "./Hero";
-import { Features } from "./pages/Features";
-import { Routes, Route } from 'react-router-dom';
-import  Layout  from "../src/components/Layout";
+import Layout from "./components/Layout";
+import Signup from "./pages/signup";
+import SignIn from "./pages/Signin";
+
+import { Loader } from "./components/loader";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Check if the loader has already run in this session
+    const hasLoadedBefore = sessionStorage.getItem("hasLoaded");
+
+    if (!hasLoadedBefore) {
+      // First time opening this tab → show loader
+      setLoading(true);
+
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem("hasLoaded", "true"); // Prevent loader again
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
-    <>  
-    <FloatingPillNavbar />
-    <Routes>
-      <Route path="/chat" element={<Chat/>} />
-      <Route element={<Layout/>}>
-        <Route path="/" element={<Hero />} />
-        <Route path="/features" element={<Features />} />
-
-      
-      </Route>
-
-    </Routes>
-   
-   
+    <>
   
+      {/* Main App UI */}
+      <div className={`transition-all duration-500 ${loading ? "opacity-0" : "opacity-100"}`}>
+        <FloatingPillNavbar />
 
+        <Routes>
+          <Route path="/chat" element={<Chat />} />
+         
+          <Route element={<Layout />}>
+            <Route path="/" element={<Hero />} />
+           
+          </Route>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+        
+       
+      </div>
+
+     {/*Loader */}
+      {loading && (
+        <div className="
+          fixed inset-0 bg-black
+          flex items-center justify-center
+          z-[9999]
+        ">
+          <Loader />
+        </div>
+      )}
     </>
   );
 }

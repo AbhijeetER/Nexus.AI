@@ -1,5 +1,6 @@
 import './global.css';
 import backDrop from "../src/assets/backdrop.mp4";
+
 import { LayoutTextFlip } from './components/layout-text-flip';
 import {motion} from 'motion/react';
 export default function Hero(){
@@ -34,9 +35,14 @@ export default function Hero(){
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
   
         
-          <h1 className="text-white text-5xl md:text-[140px] font-bold tracking-tight drop-shadow-[0_4px_25px_rgba(0,0,0,0.4)] pointer-events-auto">
-             Nexus.Ai
-          </h1>
+         <h1 class="text-white text-4xl sm:text-5xl md:text-9xl font-bold tracking-tight 
+       drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]
+       transition-all duration-300 
+       hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(255,255,255,1)]">
+  Nexus.Ai
+</h1>
+
+         
             <br />
             <p></p>
 
@@ -46,6 +52,7 @@ export default function Hero(){
           words={["Welcome to Our Project","A New Nexus of Intelligence",
              "Autonomous reasoning from scratch",
               "Rooted. Adaptive. Independent",
+              "A completely customizable architecture",
                
             "Built to think, adapt, and operate without external control.",
         "Indie-built LLM with Indigenous-informed design","Crafted with sovereignty in mind."]}

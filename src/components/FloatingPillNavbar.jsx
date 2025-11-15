@@ -2,13 +2,14 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const TABS = ["Home", "Chat"];
+const TABS = ["Home", "Chat", "Signup"];
 
 const ROUTES = {
   Home: "/",
-  // Features: "/features",
+  Signup: "/signup",
   Chat: "/chat",
 };
+
 
 export default function FloatingPillNavbar() {
   const [show, setShow] = useState(true);
@@ -41,7 +42,7 @@ export default function FloatingPillNavbar() {
       className="
         fixed top-5 left-1/2 -translate-x-1/2 z-[9999]
         flex items-center justify-center
-        backdrop-blur-xl
+        backdrop-blur-xl rounded-4xl
       "
     >
       <div

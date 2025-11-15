@@ -29,15 +29,25 @@ export const Timeline = ({
     className="w-full font-sans md:px-10"
     style={{ backgroundColor: "#0F172B" }}
       ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h1 className="text-3xl pl-10  md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Feature Feast 
-        </h1>
-       
-      </div>
+    <div className="max-w-7xl mx-auto py-5 px-4 md:px-8 lg:px-10">
+  <h1
+    className="
+      text-4xl md:text-7xl 
+      font-extrabold italic 
+      mb-4 pl-10 
+      text-black dark:text-white 
+      max-w-4xl 
+      transform transition-all duration-300 
+      hover:scale-110 hover:translate-x-4
+    "
+  >
+    Feature Feast
+  </h1>
+</div>
+
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
-          <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
+          <div key={index} className="flex justify-start pt-10 md:pt-20 md:gap-10">
             <div
               className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div

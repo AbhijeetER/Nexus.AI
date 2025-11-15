@@ -7,8 +7,6 @@ import improveEngine from '../assets/realimprovement.png';
 import agentGotReal from '../assets/agent_got_fr.png';
 import pro7 from '../assets/memo.png'
 import autogenerate from '../assets/autogenerate.png';
-import comp3 from '../assets/somethings.jpeg';
-
 export function Features() {
   const data = [
     {
@@ -87,31 +85,6 @@ export function Features() {
     },
 
     {
-      title: "Power on Palms",
-      content: (
-        <div className="timeline-row">
-    
-          {/* TEXT LEFT */}
-          <div className="timeline-text">
-            <p className="text-base text-neutral-200 neon-small">
-            Born from modest data, yet endlessly evolving!! NEXUS never sleeps. It learns when you rest, adapts when you work, and grows alongside you. Evolving when you’re asleep. Learning when you’re awake. Always becoming more with you.
-            </p>
-          </div>
-    
-          {/* IMAGE RIGHT */}
-          <div className="timeline-image-wrapper">
-            <img
-              src={palms}
-              className="timeline-img"
-              alt="Nexus Agents"
-            />
-          </div>
-    
-        </div>
-      ),
-    },
-
-    {
       title: "Improvement Engine at Service",
       content: (
         <div className="timeline-row">
@@ -137,7 +110,7 @@ export function Features() {
     },
 
     {
-      title: "Feel the Power on Palms (Extended)",
+      title: "Feel the Power on Palms",
       content: (
         <div className="timeline-row">
     
@@ -151,7 +124,7 @@ export function Features() {
           {/* IMAGE RIGHT */}
           <div className="timeline-image-wrapper">
             <img
-              src={comp3}
+              src={palms}
               className="timeline-img"
               alt="Nexus Agents"
             />

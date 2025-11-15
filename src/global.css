@@ -18,6 +18,16 @@
       }
     }
   }
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .animate-fadeOut {
+    animation: fadeOut 0.5s ease-out forwards;
+    animation-delay: 1.5s; /* Loader stays for 2 seconds total */
+  }
+  
   .font-sora {
     font-family: 'Sora', sans-serif;
   }
