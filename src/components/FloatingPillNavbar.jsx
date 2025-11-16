@@ -8,7 +8,7 @@ import {
   SignInButton,
 } from "@clerk/clerk-react";
 
-const TABS = ["Home", "Chat"]; // Removed Signup – using Clerk instead
+const TABS = ["Home", "Chat"];
 
 const ROUTES = {
   Home: "/",
@@ -69,7 +69,7 @@ export default function FloatingPillNavbar() {
 
           <Cursor cursor={cursor} />
 
-          {/* Clerk Buttons on Desktop */}
+        
           <SignedOut>
             <SignInButton mode="modal">
               <button className="ml-3 px-4 py-2 text-sm rounded-full bg-black text-white hover:bg-black/80">
@@ -78,14 +78,23 @@ export default function FloatingPillNavbar() {
             </SignInButton>
           </SignedOut>
 
+          
           <SignedIn>
+            <a
+              href="https://nexus-code-editor.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 px-4 py-2 text-sm rounded-full bg-blue-600 text-white hover:bg-blue-700"
+            >
+              Code Editor
+            </a>
+
             <div className="ml-3">
               <UserButton appearance={{ elements: { avatarBox: "w-8 h-8" } }} />
             </div>
           </SignedIn>
         </ul>
 
-        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen((p) => !p)}
           className="md:hidden px-4 py-2 text-sm rounded-full bg-black text-white"
@@ -93,7 +102,7 @@ export default function FloatingPillNavbar() {
           Menu
         </button>
 
-        {/* Mobile Dropdown */}
+
         {mobileOpen && (
           <motion.ul
             initial={{ opacity: 0, y: -5 }}
@@ -115,7 +124,6 @@ export default function FloatingPillNavbar() {
               </li>
             ))}
 
-            {/* Mobile Clerk Buttons */}
             <SignedOut>
               <li className="px-4 py-2">
                 <SignInButton mode="modal">
@@ -129,7 +137,19 @@ export default function FloatingPillNavbar() {
               </li>
             </SignedOut>
 
+     
             <SignedIn>
+              <li className="px-4 py-2">
+                <a
+                  href="https://nexus-code-editor.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block px-4 py-2 rounded-lg bg-blue-600 text-white text-center hover:bg-blue-700"
+                >
+                  Code Editor
+                </a>
+              </li>
+
               <li className="px-4 py-2 flex justify-center">
                 <UserButton appearance={{ elements: { avatarBox: "w-10 h-10" } }} />
               </li>
@@ -141,7 +161,7 @@ export default function FloatingPillNavbar() {
   );
 }
 
-/* === INDIVIDUAL DESKTOP TAB === */
+
 const Tab = ({ children, setCursor, containerRef, route }) => {
   const ref = useRef(null);
 
@@ -167,7 +187,6 @@ const Tab = ({ children, setCursor, containerRef, route }) => {
   );
 };
 
-/* === HIGHLIGHT CURSOR === */
 const Cursor = ({ cursor }) => {
   return (
     <motion.div
