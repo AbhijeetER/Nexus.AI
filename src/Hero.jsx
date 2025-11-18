@@ -59,9 +59,7 @@ export default function Hero(){
         />
       </motion.div>
   
-          <button className="mt-8 px-7 py-3 rounded-full bg-white/20 text-white text-lg backdrop-blur-md border border-white/30 hover:bg-white/30 transition pointer-events-auto" onClick={"/chat"}>
-            Try Out Model
-          </button>
+        
   
         </div>
         <div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-b from-transparent to-[#0B1020] pointer-events-none" />
