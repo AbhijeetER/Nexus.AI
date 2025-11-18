@@ -135,7 +135,7 @@ export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const API = "https://bbc543bffe48.ngrok-free.app";
+  const API = "https://3e5a143542f3.ngrok-free.app";
 
   const lastResponseRef = useRef("");
   const messagesEndRef = useRef(null);
