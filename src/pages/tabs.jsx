@@ -32,7 +32,7 @@ export default function Tabs() {
           title: 'AgentAI with Improver',
           desc: 'Get to use and work with complete indie agents.',
           // Query string for internal
-          link: '?model=Agent+Improver', 
+          link: 'https://agentwithimproverandfaiss-bhswws8o7b8pmcbhjda2tt.streamlit.app/', 
           gradient: 'from-[#0a1f2f] via-[#1e3f5b] to-[#772530]',
         },
       ].map((card, i) => {
