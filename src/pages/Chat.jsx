@@ -5,7 +5,7 @@ export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const API = "https://e1664251a793.ngrok-free.app";
+  const API = "https://60dd897f55f3.ngrok-free.app";
 
   const lastResponseRef = useRef("");
   const messagesEndRef = useRef(null);
